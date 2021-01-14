@@ -7,6 +7,18 @@
  * returns 15
  */
 
- function productOfOddNumbers() {}
+ const productOfOddNumbers = (nums) => {
+    let num = 1
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 === 1) {
+            num *= nums[i]
+        }
+    }
+    if (num === 1) {
+        return 0
+    }
+    return num
+ }
+
 
  module.exports = productOfOddNumbers

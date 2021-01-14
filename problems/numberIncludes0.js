@@ -8,6 +8,14 @@
  *  
  */
 
-function numberIncludes0() {}
+const numberIncludes0 = (num) => {
+    let numString = num.toString();
+    for (let i = 0; i < numString.length; i++) {
+        if (numString[i] === "0") {
+            return true
+        };
+    }
+    return false
+}
 
 module.exports = numberIncludes0;

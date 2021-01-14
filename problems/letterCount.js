@@ -7,6 +7,19 @@
  *
  */
 
-function letterCount() {}
+function letterCount(str) {
+    let object = {};
+    let newArr = str.toLowerCase().split(" ");
+    let newString = newArr.join("");
+    for (let i = 0; i <newString.length; i++) {
+        const element = newString[i];
+        if (object[element]) {
+            object[element] += 1;
+        } else {
+            object[element] = 1;
+        }
+    }
+    return object
+}
 
 module.exports = letterCount;
